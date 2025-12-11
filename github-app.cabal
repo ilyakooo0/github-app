@@ -1,0 +1,74 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.38.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           github-app
+version:        0.0.1
+synopsis:       Authetnicate as a GitHub App
+description:    Please see the README on GitHub at <https://github.com/serokell/github-app#readme>
+category:       Network
+homepage:       https://github.com/serokell/github-app#readme
+bug-reports:    https://github.com/serokell/github-app/issues
+author:         Serokell
+maintainer:     Kirill Elagin <kirelagin@serokell.io>
+copyright:      2018 Serokell
+license:        MPL-2.0
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/serokell/github-app
+
+library
+  exposed-modules:
+      Crypto.PubKey.RSA.Read
+      GitHub.App.Auth
+      GitHub.App.Request
+      GitHub.Data.Apps
+      GitHub.Data.Installations
+  other-modules:
+      Paths_github_app
+  hs-source-dirs:
+      src
+  default-extensions:
+      ApplicativeDo
+      DeriveDataTypeable
+      DeriveGeneric
+      FlexibleContexts
+      FlexibleInstances
+      GeneralizedNewtypeDeriving
+      LambdaCase
+      MultiParamTypeClasses
+      NamedFieldPuns
+      OverloadedStrings
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TemplateHaskell
+      TupleSections
+      TypeApplications
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , cryptonite
+    , github
+    , http-client
+    , http-client-tls
+    , http-types
+    , jwt >=0.8.0
+    , mtl
+    , safe-exceptions
+    , tagged
+    , text
+    , time
+    , x509
+    , x509-store
+  default-language: Haskell2010
