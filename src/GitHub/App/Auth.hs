@@ -48,7 +48,7 @@ import Web.JWT (JWTClaimsSet (exp, iat, iss), Signer (RSAPrivateKey), encodeSign
 
 -- | JWT expiration time. Maximum accepted by GitHub is 10 minutes
 jwtExpTime :: NominalDiffTime
-jwtExpTime = 600
+jwtExpTime = 300
 
 -- | Installation access token expiration time. It is fixed by GitHub and is equal to 1 hour
 instKeyExpTime :: NominalDiffTime
